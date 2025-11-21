@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <title>lvx_skin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- WRAPPER ทั้ง HUD -->
+    <div id="app" class="skin-wrapper hidden">
+
+        <!-- ===== PANEL ซ้าย : SKIN MENU / CLOTHES SHOP ===== -->
+        <div class="panel-left">
+            <!-- หัวข้อเทาเข้มด้านบน -->
+            <div class="panel-left-header">
+                <!-- ใช้ id ที่ JS รอไว้ -->
+                <h1 id="skin-title">SKIN MENU</h1>
+            </div>
+
+            <!-- ตัวกล่องดำใหญ่ (หมวด + สไลเดอร์) -->
+            <div class="panel-left-body">
+                <!-- คอลัมน์ไอคอนหมวดหมู่ (แนวตั้ง) -->
+                <div id="category-column" class="category-column">
+                    <!-- ปุ่มหมวดจะถูกเติมด้วย JS -->
+                </div>
+
+                <!-- โซนสไลเดอร์ด้านขวา -->
+                <div class="sliders-shell">
+                    <div id="sliders-container" class="sliders-container">
+                        <!-- แถวสไลเดอร์จะถูกสร้างด้วย JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- แถบด้านล่าง: Reset / ราคา / Confirm -->
+            <div class="panel-left-footer">
+                <button id="btn-reset" class="footer-reset">
+                   <span class="reset-icon icon-reset-main"></span>
+                   <span class="reset-text">Reset</span>
+                </button>
+
+                <!-- ให้ div นี้มี id="footer-price" ตรงกับ JS -->
+                <div class="footer-price" id="footer-price">
+                    200$
+                </div>
+
+                <button id="btn-confirm" class="footer-confirm">
+                    CONFIRM
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== PANEL ขวา : เพิ่มชุด + ตู้เสื้อผ้า ===== -->
+        <div id="panel-right" class="panel-right">
+
+            <!-- กล่องบน (เพิ่มชุดเซ็ต) -->
+            <div class="wardrobe-top">
+                <div class="wardrobe-top-header">
+                    <span class="wardrobe-top-title">เพิ่มชุดเซ็ตนี้ลงในตู้</span>
+                    <!-- label ราคาที่ JS ใช้ -->
+                    <span id="save-price-label" class="wardrobe-top-price">1,000$</span>
+                </div>
+
+                <div class="wardrobe-top-body">
+                    <input
+                        id="input-outfit-name"
+                        type="text"
+                        maxlength="20"
+                        class="input-outfit"
+                        placeholder="กรอกชื่อชุด"
+                    />
+                    <button id="btn-save-outfit" class="btn-save-outfit">
+                        CONFIRM
+                    </button>
+                </div>
+            </div>
+
+            <!-- กล่องล่าง (ตู้เสื้อผ้าของคุณ) -->
+            <div class="wardrobe-box">
+                <div class="wardrobe-box-header">
+                    <span>ตู้เสื้อผ้าของคุณ</span>
+                </div>
+                <div id="wardrobe-list" class="wardrobe-list">
+                    <!-- รายการชุดจะถูกเติมด้วย JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== แถบไกด์ล่างกลาง ===== -->
+        <div class="bottom-guide">
+            <div class="guide-item">
+                <div class="guide-key mouse-key icon-guide-mouse"></div>
+                <span>หมุนตัวละคร</span>
+            </div>
+            <div class="guide-separator"></div>
+            <div class="guide-item">
+                <div class="guide-key">X</div>
+                <span>กดเพื่อยกมือ</span>
+            </div>
+            <div class="guide-separator"></div>
+            <div class="guide-item">
+                <div class="guide-key">BACKSPACE</div>
+                <span>กดออกจากเมนู</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
